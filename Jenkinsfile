@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3'  // Official Python 3 Docker image
-        }
-    }
+    agent any
 
     environment {
         IMAGE_NAME = 'sanjeevkt720/jenkins-flask-app'
