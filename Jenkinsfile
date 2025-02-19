@@ -17,13 +17,13 @@ pipeline {
                 sh 'ls -la $KUBECONFIG'
                 sh 'chmod 644 $KUBECONFIG'
                 sh 'ls -la $KUBECONFIG'
-                #sh "pip install -r requirements.txt"
+                //sh "pip install -r requirements.txt"
             }
         }
         stage('Test') {
             steps {
                 echo 'tests are being carried out'
-                #sh "pytest"
+                //sh "pytest"
             }
         }
 
@@ -63,8 +63,8 @@ pipeline {
                 sh "kubectl set image deployment/flask-app flask-app=${IMAGE_TAG}"
             }
         }
-
-        #stage('Acceptance Test')
+/*
+        stage('Acceptance Test')
         #{
         #    steps {
 
@@ -86,7 +86,7 @@ pipeline {
         #        sh "kubectl set image deployment/flask-app flask-app=${IMAGE_TAG}"
         #    }
         #}       
-
+*/
         
     }
 }
