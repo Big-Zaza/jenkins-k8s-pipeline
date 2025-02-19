@@ -42,6 +42,7 @@ pipeline {
                 sh 'docker build -t ${IMAGE_TAG} .'
                 echo "Docker image build successfully"
                 sh 'docker image ls'
+                echo "docker image was built successfully"
                 
             }
         }
