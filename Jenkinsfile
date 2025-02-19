@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'tests are being carried out'
+                echo 'python tests are being carried out'
                 //sh "pytest"
             }
         }
@@ -61,6 +61,7 @@ pipeline {
                 sh 'kubectl config use-context arn:aws:eks:ca-central-1:303825583210:cluster/class26'
                 sh 'kubectl config current-context'
                 sh "kubectl set image deployment/flask-app flask-app=${IMAGE_TAG}"
+                echo "New image of python app has been deployed"
             }
         }
 /*
