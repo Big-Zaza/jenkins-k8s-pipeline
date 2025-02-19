@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'sanjeevkt720/jenkins-flask-app'
+        IMAGE_NAME = 'bigzaza/pythonapp'
         IMAGE_TAG = "${IMAGE_NAME}:${env.GIT_COMMIT}"
         KUBECONFIG = credentials('kubeconfig-credentials-id')
         AWS_ACCESS_KEY_ID = credentials('aws-access-key')
